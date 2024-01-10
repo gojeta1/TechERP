@@ -1,0 +1,113 @@
+.notification-container {
+    top: 2%;
+    bottom: 90%; /* Ajuste a posição conforme necessário para atender aos seus requisitos */
+    right: 2%; /* Ajuste a posição conforme necessário para atender aos seus requisitos */
+
+    /* Adicione outros estilos conforme necessário */
+  }
+  
+  .notification-spinner {
+    position: fixed;
+    top: 1%;
+    right: 3%; /* Ajuste a posição conforme necessário para atender aos seus requisitos */
+    align-items: start;
+    /* Adicione outros estilos conforme necessário */
+    @media only screen and (max-width: 768px) {
+        /* Estilos específicos para telas menores ou iguais a 768px (exemplo: tablets) */
+        position: fixed;
+        right: 1%; /* Ajuste a posição conforme necessário */
+      }
+    
+      @media only screen and (max-width: 400px) {
+        /* Estilos específicos para telas menores ou iguais a 480px (exemplo: celulares) */
+        position: fixed;
+        right: 1%; /* Ajuste a posição conforme necessário */
+      }
+  }
+  
+  .circle{
+
+    height: 40px; 
+    width: 40px; 
+    // margin-top: 2%;
+    box-shadow: 4px, 4px, 4px, 6px;
+
+    @media only screen and (max-width: 780px){
+      height: 40px; 
+      width: 40px; 
+      margin-top: 8px;
+    }
+
+    @media only screen and (max-width: 400px){
+      height: 40px; 
+      width: 40px; 
+    }
+  }
+
+  nav{
+    background-color: #00796b;
+  }
+
+  .avatar a{
+    background: none;
+    box-shadow: none;
+    margin-top: 1%;
+  }
+
+  .standard li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px; /* Espaço entre os ícones */
+  }
+
+  .standard li a {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .standard li span {
+    display: none;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    border-radius: 5px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .standard li a span {
+    line-height: 1; /* ou ajuste conforme necessário */
+  }
+
+  .standard li a:hover span {
+    display: inline-block;
+
+  }
+
+
+.dropdown-content li {
+    display: block; /* Certifique-se de que cada item seja exibido em uma nova linha */
+    align-items: center;
+    justify-items: center;
+}
+
+.dropdown-content li:hover{
+  background: #3836364b;
+}
+
+.dropdown-content li a {
+    color: white;
+}
+
+.round-span {
+  display: inline-block;
+  width: 20px; /* Ajuste conforme necessário */
+  height: 20px; /* Ajuste conforme necessário */
+  background-color: rgb(220, 60, 60); /* Cor de fundo desejada */
+  border-radius: 50%; /* Torna o span totalmente redondo */
+  text-align: center;
+  font-size: small;
+  font-weight: bolder;
+}

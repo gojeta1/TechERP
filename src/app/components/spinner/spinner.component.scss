@@ -1,0 +1,13 @@
+/* Adicione estilos personalizados conforme necessário */
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh;
+  }
+  
+  /* Estilos específicos para o spinner do Materialize */
+  .preloader-wrapper {
+    margin: 0 auto;
+  }
+  

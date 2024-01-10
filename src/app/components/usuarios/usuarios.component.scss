@@ -1,0 +1,13 @@
+span{
+    font-weight: bolder;
+}
+
+p{
+    text-transform: none;
+}
+
+@media screen and (max-width: 400px) {
+    img {
+        display: none !important;
+    }
+}

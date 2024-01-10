@@ -1,0 +1,53 @@
+
+<nav>
+    <div class="container avatar">
+            <ul id="dropdown2" class="dropdown-content teal lighten-2">
+                <li class="modal-trigger" href="#modalnotification" title="Notificações"><a><i class="material-icons right">notifications_active</i><span class="round-span white-text red pulse">3</span></a></li>
+                <li (click)="userEdit()" style="cursor: pointer;" title="Editar Usuário"><a><i class="material-icons right">person</i></a></li>
+                <li class="divider white"></li>
+                <li (click)="Logout()" style="cursor: pointer;" title="Sair"><a><i class="material-icons right">exit_to_app</i></a></li>
+            </ul>
+          <a class="btn-floating dropdown-trigger right " data-target="dropdown2"><img src="assets/avatar.jpg" class="circle"></a>    
+    </div>
+    <div class="container">
+        <!-- <div class="action-btn">
+                <img src="assets/avatar.jpg" class="circle btn-floating right">
+            <ul class="right">
+                <li (click)="Notification()" title="Notificações"><a class="btn-floating btn-small"><i class="material-icons">notifications_active</i></a></li>
+                <li (click)="userEdit()" style="cursor: pointer;" title="Editar Usuário"><a class="btn-floating btn-small"><i class="material-icons">person</i></a></li>
+                <li (click)="Logout()" style="cursor: pointer;" title="Sair"><a class="btn-floating btn-small"><i class="material-icons">exit_to_app</i></a></li>
+            </ul>
+        </div> -->
+        <div class="container center">
+            <ul id="slide-out" class="sidenav">
+                <li><a class="sidenav-close"><i class="material-icons right">close</i></a></li>
+                <li><a (click)="Dashboard()" class="sidenav-close"><i class="material-icons left">dashboard</i><span>Dashboard</span></a></li>
+                <li><a (click)="Pessoas()" class="sidenav-close"><i class="material-icons left">group_add</i><span>Pessoas</span></a></li>
+                <li><a (click)="Financeiro()" class="sidenav-close"><i class="material-icons left">attach_money</i><span>Financeiro</span></a></li>
+                <li><a (click)="Contratos()" class="sidenav-close"><i class="material-icons left">assignment</i><span>Contratos</span></a></li>
+                <li><a (click)="Produtos()" class="sidenav-close"><i class="material-icons left">format_list_bulleted</i><span>Produtos</span></a></li>
+                <li><a (click)="Estoque()" class="sidenav-close"><i class="material-icons left">swap_horiz</i><span>Estoque</span></a></li>
+                <li><a (click)="Usuarios()" class="sidenav-close"><i class="material-icons left">manage_accounts</i><span>Usuários</span></a></li>
+                <li><a (click)="Configuracoes()" class="sidenav-close"><i class="material-icons left">settings</i><span>Configurações</span></a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down standard">
+                <li><a (click)="Usuarios()"><i class="material-icons left">manage_accounts</i><span>Usuários</span></a></li>
+                <li><a (click)="Pessoas()"><i class="material-icons left">group_add</i><span>Pessoas</span></a></li>
+                <li><a (click)="Produtos()"><i class="material-icons left">format_list_bulleted</i><span>Produtos</span></a></li>
+                <li><a class="sidenav-trigger show-on-large" data-target="slide-out"><i class="material-icons left">more_horiz</i></a></li>
+            </ul>
+        </div>
+        <a style="cursor: pointer;" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>        
+  </div>
+</nav>
+<div id="modalnotification" class="modal">
+    <div class="modal-content">
+        <h4 class="center">Notificações Gerais</h4>
+        <app-notification></app-notification>
+    </div>
+    <div class="modal-footer">
+        <div class="divider"></div>
+      <a class="modal-close waves-effect waves-green btn-flat"><i class="material-icons right">close</i>Fechar</a>
+    </div>
+  </div>
+<app-spinner class="notification-spinner" [show]="isLoading" /> 

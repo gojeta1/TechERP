@@ -1,0 +1,16 @@
+/* Estilo para tornar a bolinha invisível, mantendo a linha */
+.lista-sem-bolinha {
+    list-style-type: none;
+  }
+  
+  .lista-sem-bolinha::before {
+    content: "\2022"; /* Código Unicode para o ponto (•) usado como marcador de lista */
+    color: transparent; /* Torna a bolinha invisível, mas mantém a linha */
+    display: inline-block;
+    width: 1em; /* Ajuste conforme necessário */
+    margin-right: 0.5em; /* Adiciona espaço entre o marcador e o texto */
+  }
+// h3{
+//     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+//     text-transform: uppercase;
+// }  
