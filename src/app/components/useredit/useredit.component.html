@@ -1,69 +1,59 @@
-<div class="container">
-    <br>
-    <br>
-    <div class="row center">
-        <form name="form" class="col s12 z-depth-5" (ngSubmit)="editedUser()">
-          <div class="row">
-            <div class="file-field input-field col s12">
-                <div class="btn">
-                    <a class="white-text"><i class="material-icons right">cloud</i></a><span>Arquivo</span>
-                    <input type="file" multiple>
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Foto de Perfil (Recomendamos colocar no tamanho de 150x150)">
-                </div>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" class="validate"  [(ngModel)]="dados.nome" name="name" required>
-              <label for="icon_prefix">Nome Completo</label>
-            </div>
-            <div class="input-field col s6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate" [(ngModel)]="dados.telephone" name="telephone" >
-              <label for="icon_telephone">Celular</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">place</i>
-                <input id="icon_endereco" type="text" class="validate"  [(ngModel)]="dados.place" name="place">
-                <label for="icon_endereco">Endereço</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">email</i>
-                <input id="icon_email" type="email" class="validate"  [(ngModel)]="dados.email" name="email">
-                <label for="icon_email">Email</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">recent_actors</i>
-                <input id="icon_cpf" type="text" class="validate"  [(ngModel)]="dados.cpf" name="cpf">
-                <label for="icon_cpf">CPF</label>
-            </div>    
-            <div class="input-field col s6">
-                <i class="material-icons prefix">map</i>
-                <input id="icon_cidade" type="text" class="validate"  [(ngModel)]="dados.cidade" name="cidade">
-                <label for="icon_cidade">Cidade</label>
-            </div>  
-            </div>
-            <div class="container">
-                <div class="row s12 center-align">
-                    <div class="col s4">
-                        <button class="btn waves-effect waves-light right btn-small" type="submit">Salvar
-                            <i class="material-icons right">edit</i>
-                        </button>    
+<div class="modal-content">
+            <form name="form" (ngSubmit)="editedUser()" >
+              <div class="row">
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <a class="white-text"><i class="material-icons right">cloud</i></a><span>Arquivo</span>
+                        <input type="file" [ngModel]="file" name="file">
                     </div>
-                    <div class="col s4 right">
-                        <button (click)="closeEdit()" class="btn waves-effect waves-light red left btn-small" type="submit">Sair
-                            <i class="material-icons right">clear</i>
-                        </button>  
-                    </div>
-                    <div class="col s4">
-                        <button (click)="clearDados()" class="btn waves-effect waves-light  grey darken-1 btn-small" type="submit">Limpar Campos
-                            <i class="material-icons right">clear</i>
-                        </button>  
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Foto de Perfil (Recomendamos colocar no tamanho de 150x150)" [ngModel]="filepath" name="filepath">
                     </div>
                 </div>
-            </div>
-        </form>
-
-      </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate" [ngModel]="nome" name="nome">
+                  <label for="icon_prefix">Nome Completo</label>
+                </div>
+                <div class="input-field col s6">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="icon_telephone" type="tel" class="validate" [ngModel]="telephone" name="telephone">
+                  <label for="icon_telephone">Celular</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">place</i>
+                    <input id="icon_endereco" type="text" class="validate" [ngModel]="place" name="place">
+                    <label for="icon_endereco">Endereço</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="icon_email" type="email" class="validate" [ngModel]="email" name="email" >
+                    <label for="icon_email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">recent_actors</i>
+                    <input id="icon_cpf" type="text" class="validate" [ngModel]="cpf" name="cpf">
+                    <label for="icon_cpf">CPF</label>
+                </div>    
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">map</i>
+                    <input id="icon_cidade" type="text" class="validate" [ngModel]="cidade" name="cidade">
+                    <label for="icon_cidade">Cidade</label>
+                </div>  
+                </div>
+            </form>
 </div>
+
+<div class="divider"></div>
+<div class="modal-footer">
+    <a class="waves-effect waves-teal lighten-2 btn-flat teal white-text" type="submit">Salvar
+        <i class="material-icons right">save</i>
+    </a>    
+    <a (click)="clearDados()" class="waves-effect waves-teal lighten-5 btn-flat teal black-text">Limpar Campos
+        <i class="material-icons right">clear_all</i>
+    </a>  
+    <a class="waves-effect waves-teal lighten-2 btn-flat modal-close" type="submit">Sair
+        <i class="material-icons right">clear</i>
+    </a>  
+</div>
+
