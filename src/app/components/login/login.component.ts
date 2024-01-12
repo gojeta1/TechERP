@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
 import { SpinnerComponent } from '../spinner/spinner.component';
+import { RecuperasenhaComponent } from '../recuperasenha/recuperasenha.component';
 
-declare var M: any;
+
+declare var M: any | undefined;
 
 @Component({
   selector: 'app-login',
@@ -14,18 +16,25 @@ declare var M: any;
     CommonModule, 
     FormsModule, 
     SpinnerComponent, 
+    RecuperasenhaComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
-export class LoginComponent {
+
+export class LoginComponent implements AfterViewInit{
 
 
-  constructor(private router: Router, private AuthService: AuthService){}
+  constructor(private router: Router, private AuthService: AuthService, private el: ElementRef){}
+
+  ngAfterViewInit(): void {
+    const elems = this.el.nativeElement.querySelectorAll('.modal')
+    const instance = M.Modal.init(elems)  
+  }
 
   username: string = '';
   password: string = '';
-  notification: {message:  string, type: string} | null = null;
+  rememberMe: boolean = false;
   isLoading: boolean = false;
 
   singin(){
@@ -37,6 +46,8 @@ export class LoginComponent {
 
           this.isLoading = true;
           M.toast({html: 'Login realizado com Sucesso !', classes:'teal accent-4'});
+
+
           setTimeout(() => {
             this.isLoading = false;
             this.router.navigate(['home/dashboard'])
