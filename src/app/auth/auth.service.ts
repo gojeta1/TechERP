@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { jwtDecode } from 'jwt-decode';
 import { Router } from '@angular/router';
 
+declare var M:any;
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +20,17 @@ export class AuthService {
     // Lógica de autenticação aqui (por exemplo, uma chamada a uma API)
     if(username === 'admin' && password === '123'){
 
-      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c1';
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';    
       const expirationDate = new Date();
       expirationDate.setHours(expirationDate.getHours() + 1);
       this.cookieService.set(this.TOKEN_KEY, token, expirationDate);
+
+      // if (rememberMe) {
+      //   this.cookieService.set('rememberMe', 'true', expirationDate);
+      // } else {
+      //   this.cookieService.delete('rememberMe');
+      // }
+
       this.isAuthenticated = true;
       return true;
 
