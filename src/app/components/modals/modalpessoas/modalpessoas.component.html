@@ -1,9 +1,55 @@
 <!-- <div id="modalPessoas" class="modal"> -->
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4>Nova Pessoa</h4>
+      <form class="form col s12">
+        <div class="row">
+          <div class="input-field col s12 m6">
+              <input id="nome" type="text" class="validate">
+              <label for="nome">Nome Completo</label>
+          </div>
+          <div class="input-field col s12 m6">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+          </div>
+          <div class="input-field col s12 m6">
+              <input id="endereco" type="text" class="validate">
+              <label for="endereco">Endereço</label>
+          </div>
+          <div class="input-field col s12 m6">
+              <input id="numero" type="text" class="validate">
+              <label for="numero">Numero</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="telefone" type="text" class="validate">
+            <label for="telefone">Telefone</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="cpf" type="text" class="validate">
+            <label for="cpf">CPF/CNPJ</label>
+          </div>
+          <div class="input-field col s12 m6">
+              <select>
+                <option value="" disabled selected>Escolha o Tipo</option>
+                <option value="colaborador">Colaborador</option>
+                <option value="fornecedor">Fornecedor</option>
+                <option value="cliente">Cliente</option>
+              </select>
+              <label for="tipoPessoa">Tipo Pessoa</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="cidade" type="text" class="validate">
+            <label for="cidade">Cidade</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="estado" type="text" class="validate">
+            <label for="estado">Estado</label>
+          </div>
+      </div>
+      </form>
     </div>
     <div class="modal-footer">
-      <a class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a class="waves-effect waves-teal teal lighten-2 btn-flat"><i class="material-icons right">save</i>Salvar</a>
+      <a class="waves-effect waves-teal teal lighten-5 btn-flat"><i class="material-icons right">clear_all</i>Limpas Campos</a>
+      <a class="modal-close waves-effect waves-teal  btn-flat"><i class="material-icons right">close</i>Sair</a>
     </div>
   <!-- </div> -->
