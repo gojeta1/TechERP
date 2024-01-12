@@ -3,7 +3,7 @@
     <div class="container avatar">
             <ul id="dropdown2" class="dropdown-content teal lighten-2">
                 <li class="modal-trigger" href="#modalnotification" title="Notificações"><a><i class="material-icons right">notifications_active</i><span class="round-span white-text red pulse">3</span></a></li>
-                <li (click)="userEdit()" style="cursor: pointer;" title="Editar Usuário"><a><i class="material-icons right">person</i></a></li>
+                <li class="modal-trigger" href="#modalUseredit" style="cursor: pointer;" title="Editar Usuário"><a><i class="material-icons right">person</i></a></li>
                 <li class="divider white"></li>
                 <li (click)="Logout()" style="cursor: pointer;" title="Sair"><a><i class="material-icons right">exit_to_app</i></a></li>
             </ul>
@@ -40,14 +40,6 @@
         <a style="cursor: pointer;" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>        
   </div>
 </nav>
-<div id="modalnotification" class="modal">
-    <div class="modal-content">
-        <h4 class="center">Notificações Gerais</h4>
-        <app-notification></app-notification>
-    </div>
-    <div class="modal-footer">
-        <div class="divider"></div>
-      <a class="modal-close waves-effect waves-green btn-flat"><i class="material-icons right">close</i>Fechar</a>
-    </div>
-  </div>
+<app-notification id="modalnotification" class="modal" />
+<app-useredit id="modalUseredit" class="modal"/>
 <app-spinner class="notification-spinner" [show]="isLoading" /> 
