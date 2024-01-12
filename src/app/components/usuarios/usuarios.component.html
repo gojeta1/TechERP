@@ -1,6 +1,13 @@
 <br>
 <br>
 <div class="container z-depth-5"> 
+  <div class="row"></div>
+  <div class="row">
+    <div class="col s12">
+      <a class="btn-small teal waves-effect waves-teal lighten-2 modal-trigger" href="#modalUsuario"><i class="material-icons">add</i></a>
+      <a class="btn-small teal waves-effect waves-teal lighten-2 right"><i class="material-icons right">close</i><span>Voltar</span></a>   
+    </div>
+  </div>
     <ul class="collection">     
         <li class="collection-item avatar">
             <table class="responsive-table centered">  
@@ -21,6 +28,7 @@
                 <td><p>Administrador</p></td>
                 <td><p>{{email.guilherme}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
@@ -31,6 +39,7 @@
                 <td><p>Administrador</p></td>
                 <td><p>{{email.eduarda}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
@@ -41,6 +50,7 @@
                 <td><p>Coordenador</p></td>
                 <td><p>{{email.marconi}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
@@ -51,6 +61,7 @@
                 <td><p>Financeiro</p></td>
                 <td><p>{{email.amanda}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
@@ -61,6 +72,7 @@
                 <td><p>Serviços Gerais</p></td>
                 <td><p>{{email.regina}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
@@ -71,16 +83,14 @@
                 <td><p>Recursos Humanos</p></td>
                 <td><p>{{email.karina}}</p></td>
                 <td>
+                        <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">edit</i></a>
                         <a href="#!" style="margin-left: 5%;" ><i class="material-icons teal-text">refresh</i></a>
                         <a href="#!" style="margin-left: 5%;"><i class="material-icons teal-text">delete</i></a>
                 </td>
               </tr>
             </tbody>
             </table>
-          <!-- <span class="title">Guilherme Barbosa</span>
-          <p>Administrador</p>
-          <p>{{email.guilherme}}</p> -->
         </li>
       </ul>
-
+      <app-modalusuarios id="modalUsuario" class="modal"/>
 </div>
