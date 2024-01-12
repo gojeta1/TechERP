@@ -32,11 +32,11 @@ export const routes: Routes = [
          component: DashboardComponent,
          canActivate: [AuthGuard],
          },
-         {
-            path: 'useredit',
-            component: UsereditComponent,
-            canActivate: [AuthGuard],
-         },
+         // {
+         //    path: 'useredit',
+         //    component: UsereditComponent,
+         //    canActivate: [AuthGuard],
+         // },
          {
             path: 'notification',
             component: NotificationComponent,
