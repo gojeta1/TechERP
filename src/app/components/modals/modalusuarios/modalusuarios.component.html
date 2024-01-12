@@ -1,0 +1,67 @@
+<div class="modal-content">
+    <h4>Novo Usuário</h4>
+    <div class="container">
+        <div class="row"></div>
+        <div class="row center">
+            <form>
+                <div class="col s12">
+                    <img *ngIf="avatarUrl" [src]="avatarUrl" alt="Avatar" class="circle responsive-img" style="width: 150px; height: 150px;">
+                  </div>
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                      <span>Foto de Perfil <i class="material-icons right">add_a_photo</i></span>
+                      <input type="file" name="file" accept="image/*" (change)="onFileChange($event)">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" placeholder="Escolha uma imagem (Recomendamos 150x150)" name="filepath">
+                    </div>
+                  </div>
+                  
+                <div class="input-field col s6">
+                    <input type="text" id="nomeUsuariro" class="validate">
+                    <label for="nomeUsuariro">Nome</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="email" id="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="password" id="senha">
+                    <label for="senha">Senha</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="password" id="conf_senha">
+                    <label for="conf_senha">Confirmar Senha</label>
+                </div>
+                <div class="input-field col s6">
+                    <select>
+                        <option value="" disabled selected>Tipo de Usuário</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="padrao">Padrão</option>
+                        <option value="coordenador">Coordenador</option>
+                        <option value="financeiro">Financeiro</option>
+                    </select>
+                    <label>Tipo Usuário</label>
+                </div>
+                <div class="input-field col s6">
+                    <p>
+                        <label>
+                          <input type="checkbox" checked="checked" />
+                          <span>Receber E-mails do Sistema</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="input-fiel col s6">
+                    <input type="text" class="datepicker center" id="nascimento">
+                    <label for="nascimento">Data de Nascimento</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <div class="divider"></div>
+    <a class="btn-flat waves-effect waves-teal teal lighten-2"><i class="material-icons right">save</i>Salvar</a>
+    <a class="btn-flat waves-effect waves-teal teal lighten-5 black-text"><i class="material-icons right">clear_all</i>Limpar Campos</a>
+    <a class="btn-flat waves-effect waves-teal modal-close"><i class="material-icons right">close</i>Sair</a>
+</div>
