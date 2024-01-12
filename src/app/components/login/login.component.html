@@ -8,14 +8,28 @@
             </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="username" type="text" class="validate" name="username" [(ngModel)]="username">
+              <input id="username" type="text" class="validate" name="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
               <label for="username">Usuário</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" name="password" [(ngModel)]="password">
+              <input id="password" type="password" class="validate" name="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
               <label for="password">Senha</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <div class="switch">
+                <label>
+                  <input type="checkbox" [(ngModel)]="rememberMe" [ngModelOptions]="{standalone: true}">
+                  <span class="lever"></span>
+                  Lembrar-me
+                </label>
+              </div>
+            </div>
+            <div class="input-field col s12 m6">
+              <a href="#modalRecuperasenha" class="teal-text modal-trigger">Esqueceu a senha ?</a>
             </div>
           </div>
           <button class="btn waves-effect waves-light" type="submit" name="action">Entrar
@@ -23,6 +37,6 @@
           </button>
         </form>
       </div>    
-        <app-spinner class="container" [show]="isLoading" style="height: 5vh; width: 5vh;" />
-
+        <app-spinner class="container white" [show]="isLoading" style="height: 5vh; width: 5vh;" />
+        <app-recuperasenha id="modalRecuperasenha" class="modal" />
   </div>
