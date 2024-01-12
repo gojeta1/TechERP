@@ -23,13 +23,4 @@ export class ProdutosComponent implements OnInit{
       const instance = M.Modal.init(elems)
     }
 
-    openModal(){
-
-      const modal = document.getElementById('modalProdutos');
-      const instance = M.Modal.getInstance(modal)
-
-      instance.open();
-      
-    }
-
 }
