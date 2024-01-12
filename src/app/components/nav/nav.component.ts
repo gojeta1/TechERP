@@ -33,10 +33,12 @@ export class NavComponent implements AfterViewInit {
     const elems = this.el.nativeElement.querySelectorAll('.sidenav');
     const instance = M.Sidenav.init(elems, Option);  
     
+    const elems2 = this.el.nativeElement.querySelectorAll('.modal')
+    const instance2 = M.Modal.init(elems2);
 
     const elems3 = document.querySelectorAll('.dropdown-trigger');
     const instances3 = M.Dropdown.init(elems3,{
-      direction: 'right',
+      direction: 'left',
     });
 
 
@@ -53,13 +55,6 @@ export class NavComponent implements AfterViewInit {
     }, 3000);
   }
 
-  userEdit(): void{
-    // this.userEdited = true;
-    this.router.navigate(['/home/useredit']);
-}
-  notificationModal(){
-
-  }
   
   voltarHome(){
     this.router.navigate(['/home/dashboard'])
