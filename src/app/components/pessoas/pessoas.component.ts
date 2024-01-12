@@ -30,13 +30,12 @@ export class PessoasComponent implements OnInit {
   }
 
   openModal(){
-    
+
     const modal = document.getElementById('modalPessoas');
     const instance2 = M.Modal.getInstance(modal);
 
     instance2.open();
-
-    console.log(modal)
+    
   }
 
 
