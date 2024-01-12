@@ -28,10 +28,6 @@ export class UsereditComponent {
     cpf: string = ''
     cidade: string = ''
   
-
-
-
-
   constructor(private router: Router){}
 
   clearDados(){
@@ -45,6 +41,27 @@ export class UsereditComponent {
       this.cidade = ''
   }
 
+  private _avatarUrl: string | null = null;
+  public get avatarUrl(): string | null {
+    return this._avatarUrl;
+  }
+  public set avatarUrl(value: string | null) {
+    this._avatarUrl = value;
+  }
+
+  onFileChange(el: any) {
+    const fileInput = el.target;
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        this.avatarUrl = e.target.result;
+      };
+
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+  }
+  
   editedUser(){
 
   }
