@@ -15,4 +15,8 @@ export class ModalprodutosComponent implements OnInit{
       const elems = document.querySelectorAll('select')
       const instance = M.FormSelect.init(elems)
   }
+
+  limpaCampos(){
+    
+  }
 }
