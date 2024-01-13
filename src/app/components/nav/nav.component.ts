@@ -5,29 +5,38 @@ import { UsereditComponent } from '../useredit/useredit.component';
 import { Router } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { NotificationComponent } from '../notification/notification.component';
+import { FinanceiroOptionsComponent } from "../financeirooptions/financeirooptions.component";
+import { CommonModule } from '@angular/common';
+import { ContratosoptionsComponent } from '../contratosoptions/contratosoptions.component';
+
 
 // import M from 'materialize-css';
 declare var M: any;
 
 @Component({
-  selector: 'app-nav',
-  standalone: true,
-  imports: [
-    SpinnerComponent,
-    UsereditComponent,
-    DashboardComponent,
-    NotificationComponent,
-  ],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
+    selector: 'app-nav',
+    standalone: true,
+    templateUrl: './nav.component.html',
+    styleUrl: './nav.component.scss',
+    imports: [
+        CommonModule,
+        SpinnerComponent,
+        UsereditComponent,
+        DashboardComponent,
+        NotificationComponent,
+        FinanceiroOptionsComponent,
+        ContratosoptionsComponent,
+    ]
 })
 export class NavComponent implements AfterViewInit {
 
   constructor(private authService: AuthService, private el: ElementRef, private router: Router){}
 
   isLoading: boolean = false;
-
-
+  showFinanceiroOptions = false;
+  showContratosOptions = false;
+  showConfigOptions = false;
+  
   ngAfterViewInit(): void {
 
     const elems = this.el.nativeElement.querySelectorAll('.sidenav');
@@ -40,7 +49,6 @@ export class NavComponent implements AfterViewInit {
     const instances3 = M.Dropdown.init(elems3,{
       direction: 'left',
     });
-
 
   }
 
@@ -55,7 +63,14 @@ export class NavComponent implements AfterViewInit {
     }, 3000);
   }
 
-  
+
+  toggleFinanceiroOptions() {
+      this.showFinanceiroOptions = !this.showFinanceiroOptions;
+  }
+
+  toggleContratosOptions() {
+    this.showContratosOptions = !this.showContratosOptions;
+  }
   voltarHome(){
     this.router.navigate(['/home/dashboard'])
   }
@@ -74,15 +89,6 @@ export class NavComponent implements AfterViewInit {
   Pessoas(){
     this.router.navigate(['/home/pessoas']);
   }
-
-  Financeiro(){
-    this.router.navigate(['/home/financeiro']);
-  }
-
-  Contratos(){
-    this.router.navigate(['/home/contratos']);
-  }
-
   Produtos(){
     this.router.navigate(['/home/produtos']);
   }
@@ -94,8 +100,8 @@ export class NavComponent implements AfterViewInit {
     this.router.navigate(['/home/usuarios']);
   }
 
-  Configuracoes(){
-    this.router.navigate(['/home/config']);
+  toogleConfigOptions(){
+    this.showConfigOptions = !this.showConfigOptions ;
   }
 
 
