@@ -23,12 +23,24 @@
                 <li><a class="sidenav-close"><i class="material-icons right">close</i></a></li>
                 <li><a (click)="Dashboard()" class="sidenav-close"><i class="material-icons left">dashboard</i><span>Dashboard</span></a></li>
                 <li><a (click)="Pessoas()" class="sidenav-close"><i class="material-icons left">group_add</i><span>Pessoas</span></a></li>
-                <li><a (click)="Financeiro()" class="sidenav-close"><i class="material-icons left">attach_money</i><span>Financeiro</span></a></li>
-                <li><a (click)="Contratos()" class="sidenav-close"><i class="material-icons left">assignment</i><span>Contratos</span></a></li>
+                <li (click)="toggleFinanceiroOptions()">
+                    <a><i class="material-icons left">attach_money</i><span>Financeiro</span></a>
+                    <app-financeirooptions [show]="showFinanceiroOptions"/>
+                </li>
+                <li (click)="toggleContratosOptions()"><a><i class="material-icons left">assignment</i><span>Contratos</span></a>
+                    <app-contratosoptions [show]="showContratosOptions"/>
+                </li>
                 <li><a (click)="Produtos()" class="sidenav-close"><i class="material-icons left">format_list_bulleted</i><span>Produtos</span></a></li>
                 <li><a (click)="Estoque()" class="sidenav-close"><i class="material-icons left">swap_horiz</i><span>Estoque</span></a></li>
-                <li><a (click)="Usuarios()" class="sidenav-close"><i class="material-icons left">manage_accounts</i><span>Usuários</span></a></li>
-                <li><a (click)="Configuracoes()" class="sidenav-close"><i class="material-icons left">settings</i><span>Configurações</span></a></li>
+                <li (click)="toogleConfigOptions()"><a><i class="material-icons left">settings</i><span>Configurações</span></a>
+                    <ul *ngIf="showConfigOptions" class="teal lighten-5">
+                        <li><a (click)="Usuarios()" class="sidenav-close">Usuários</a></li>
+                        <li><a class="sidenav-close">Minha Loja</a></li>
+                        <li><a class="sidenav-close">Retenções e Impostos</a></li>
+                        <li><a class="sidenav-close">Segurança</a></li>
+                        <li><a class="sidenav-close">Permissões Usuários</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="right hide-on-med-and-down standard">
                 <li><a (click)="Usuarios()"><i class="material-icons left">manage_accounts</i><span>Usuários</span></a></li>
