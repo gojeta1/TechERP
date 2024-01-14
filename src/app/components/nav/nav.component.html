@@ -21,7 +21,7 @@
         <div class="container center">
             <ul id="slide-out" class="sidenav">
                 <li><a class="sidenav-close"><i class="material-icons right">close</i></a></li>
-                <li><a (click)="Dashboard()" class="sidenav-close"><i class="material-icons left">dashboard</i><span>Dashboard</span></a></li>
+                <li><a (click)="Dashboard()" class="sidenav-close"><i class="material-icons left">analytics</i><span>Dashboard</span></a></li>
                 <li><a (click)="Pessoas()" class="sidenav-close"><i class="material-icons left">group_add</i><span>Pessoas</span></a></li>
                 <li (click)="toggleFinanceiroOptions()">
                     <a><i class="material-icons left">attach_money</i><span>Financeiro</span></a>
@@ -30,7 +30,8 @@
                 <li (click)="toggleContratosOptions()"><a><i class="material-icons left">assignment</i><span>Contratos</span></a>
                     <app-contratosoptions [show]="showContratosOptions"/>
                 </li>
-                <li><a (click)="Produtos()" class="sidenav-close"><i class="material-icons left">format_list_bulleted</i><span>Produtos</span></a></li>
+                <li><a (click)="Pedidos()" class="sidenav-close"><i class="material-icons left">fact_check</i><span>Pedidos</span></a></li>
+                <li><a (click)="Produtos()" class="sidenav-close"><i class="material-icons left">view_in_ar</i><span>Produtos</span></a></li>
                 <li><a (click)="Estoque()" class="sidenav-close"><i class="material-icons left">swap_horiz</i><span>Estoque</span></a></li>
                 <li (click)="toogleConfigOptions()"><a><i class="material-icons left">settings</i><span>Configurações</span></a>
                     <ul *ngIf="showConfigOptions" class="teal lighten-5">
