@@ -7,7 +7,14 @@ p{
 }
 
 @media screen and (max-width: 400px) {
-    img {
+    .circle {
         display: none !important;
     }
+}
+
+.custom-rounded input {
+    border-radius: 10px; /* Ou o valor que preferir para cantos arredondados */
+}
+.custom-rounded {
+padding: 1%;
 }
