@@ -36,7 +36,7 @@ export class NavComponent implements AfterViewInit {
   showFinanceiroOptions = false;
   showContratosOptions = false;
   showConfigOptions = false;
-  
+
   ngAfterViewInit(): void {
 
     const elems = this.el.nativeElement.querySelectorAll('.sidenav');
@@ -80,14 +80,14 @@ export class NavComponent implements AfterViewInit {
   Dashboard(){
     this.router.navigate(['/home/dashboard']);
   }
-
-
   Cadastros(){
-    this.router.navigate(['/home/cadastros'])
+    this.router.navigate(['/home/cadastros']);
   }
-
   Pessoas(){
     this.router.navigate(['/home/pessoas']);
+  }
+  Pedidos(){
+    this.router.navigate(['/home/pedidos']);
   }
   Produtos(){
     this.router.navigate(['/home/produtos']);
@@ -95,7 +95,6 @@ export class NavComponent implements AfterViewInit {
   Estoque(){
     this.router.navigate(['/home/estoque']);
   }
-
   Usuarios(){
     this.router.navigate(['/home/usuarios']);
   }
