@@ -8,6 +8,7 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { EstoqueComponent } from './components/estoque/estoque.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 export const routes: Routes = [
     {
@@ -36,6 +37,11 @@ export const routes: Routes = [
          {
             path: 'pessoas',
             component: PessoasComponent,
+            canActivate: [AuthGuard],
+         },
+         {
+            path: 'pedidos',
+            component: PedidosComponent,
             canActivate: [AuthGuard],
          },
          {
