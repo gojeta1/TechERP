@@ -22,12 +22,12 @@ export class UsuariosComponent implements OnInit{
   }
 
   email = {
-    guilherme: 'guilherme@gmail.com',
-    eduarda: 'eduarda@gmail.com',
-    marconi: 'marconi@gmail.com',
-    amanda: 'amanda@gmail.com',
-    regina: 'regina@gmail.com',
-    karina: 'karina@gmail.com'
+    markis: 'markis@gmail.com',
+    natalia: 'natalia@gmail.com',
+    nelson: 'nelson@gmail.com',
+    cicera: 'cicera@gmail.com',
+    maria: 'maria@gmail.com',
+    nadia: 'karina@gmail.com'
   }
 
 
