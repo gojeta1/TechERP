@@ -1,0 +1,29 @@
+<div class="modal-content">
+    <br>
+    <form class="center" (ngSubmit)="enviarCodigo()">
+        <div class="input-field col s12 m4">
+            <input type="password" id="senha" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}">
+            <label for="senha">Nova Senha</label>
+        </div>
+        <div class="input-field col s12 m4">
+            <input type="password" id="conf_senha" [(ngModel)]="conf_senha" [ngModelOptions]="{standalone: true}">
+            <label for="senha">Confirmar Senha</label>
+        </div>
+        <div class="input-field col s12 m4" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
+            <i class="material-icons prefix">pin</i>
+            <input id="codigo" type="text" class="validate" name="codigo" [(ngModel)]="codigoVerifica" [ngModelOptions]="{standalone: true}">
+            <label for="codigo">Código de Verificação</label>
+          </div>
+          
+          <div class="col s12" *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
+            <h5 class="teal-text">{{ tempoRestante }} s</h5>
+          </div>        
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="divider"></div>
+        <a *ngIf="!aguardandoCodigo" class="btn waves-effect waves-teal teal lighten-6 black-text" (click)="reenviarCodigo()">Reenviar</a>
+        <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-1 teal white-text btn-flat" type="submit"><i class="material-icons right">send</i>Solicitar Código</a>
+        <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-5 teal white-text btn-flat" type="submit"><i class="material-icons right">send</i>Alterar Senha</a>
+        <a class="modal-close waves-effect waves-teal btn-flat"><i class="material-icons right">close</i>Fechar</a>
+</div>
