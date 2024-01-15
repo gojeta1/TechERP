@@ -4,6 +4,7 @@
             <ul id="dropdown2" class="dropdown-content teal lighten-2">
                 <li class="modal-trigger" href="#modalnotification" title="Notificações"><a><i class="material-icons right">notifications_active</i><span class="round-span white-text red pulse">3</span></a></li>
                 <li class="modal-trigger" href="#modalUseredit" style="cursor: pointer;" title="Editar Usuário"><a><i class="material-icons right">person</i></a></li>
+                <li class="modal-trigger" href="#modalTrocasenha" style="cursor: pointer;" title="Alterar Senha"><a><i class="material-icons right">refresh</i></a></li>
                 <li class="divider white"></li>
                 <li (click)="Logout()" style="cursor: pointer;" title="Sair"><a><i class="material-icons right">exit_to_app</i></a></li>
             </ul>
@@ -53,6 +54,7 @@
         <a style="cursor: pointer;" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>        
   </div>
 </nav>
+<app-modaltrocasenha id="modalTrocasenha" class="modal"/>
 <app-notification id="modalnotification" class="modal" />
 <app-useredit id="modalUseredit" class="modal"/>
 <app-spinner class="notification-spinner" [show]="isLoading" /> 
