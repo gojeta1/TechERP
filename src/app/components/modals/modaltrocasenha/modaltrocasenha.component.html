@@ -1,24 +1,28 @@
 <div class="modal-content">
     <br>
-    <form class="center" (ngSubmit)="enviarCodigo()">
-        <div class="input-field col s12 m4">
-            <input type="password" id="senha" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}">
-            <label for="senha">Nova Senha</label>
-        </div>
-        <div class="input-field col s12 m4">
-            <input type="password" id="conf_senha" [(ngModel)]="conf_senha" [ngModelOptions]="{standalone: true}">
-            <label for="senha">Confirmar Senha</label>
-        </div>
-        <div class="input-field col s12 m4" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
-            <i class="material-icons prefix">pin</i>
-            <input id="codigo" type="text" class="validate" name="codigo" [(ngModel)]="codigoVerifica" [ngModelOptions]="{standalone: true}">
-            <label for="codigo">Código de Verificação</label>
-          </div>
-          
-          <div class="col s12" *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
-            <h5 class="teal-text">{{ tempoRestante }} s</h5>
-          </div>        
-    </form>
+    <div class="row">
+        <form class="center" (ngSubmit)="enviarCodigo()">
+            <div class="input-field col s12 m4">
+                <i class="material-icons prefix">more_horiz</i>
+                <input type="password" id="senha" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}">
+                <label for="senha">Nova Senha</label>
+            </div>
+            <div class="input-field col s12 m4">
+                <i class="material-icons prefix">more_horiz</i>
+                <input type="password" id="conf_senha" [(ngModel)]="conf_senha" [ngModelOptions]="{standalone: true}">
+                <label for="senha">Confirmar Senha</label>
+            </div>
+            <div class="input-field col s12 m4" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
+                <i class="material-icons prefix">pin</i>
+                <input id="codigo" type="text" class="validate" name="codigo" [(ngModel)]="codigoVerifica" [ngModelOptions]="{standalone: true}">
+                <label for="codigo">Código de Verificação</label>
+              </div>
+              
+              <div class="col s6 offset-s6" *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
+                <h5 class="teal-text">{{ tempoRestante }} s</h5>
+              </div>        
+        </form>    
+    </div>
 </div>
 <div class="modal-footer">
     <div class="divider"></div>
