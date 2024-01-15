@@ -8,6 +8,7 @@ import { NotificationComponent } from '../notification/notification.component';
 import { FinanceiroOptionsComponent } from "../financeirooptions/financeirooptions.component";
 import { CommonModule } from '@angular/common';
 import { ContratosoptionsComponent } from '../contratosoptions/contratosoptions.component';
+import { ModaltrocasenhaComponent } from '../modals/modaltrocasenha/modaltrocasenha.component';
 
 
 // import M from 'materialize-css';
@@ -26,6 +27,7 @@ declare var M: any;
         NotificationComponent,
         FinanceiroOptionsComponent,
         ContratosoptionsComponent,
+        ModaltrocasenhaComponent,
     ]
 })
 export class NavComponent implements AfterViewInit {
