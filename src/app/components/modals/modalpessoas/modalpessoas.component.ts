@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-declare var M: any;
+declare var M: any | undefined;
 
 @Component({
   selector: 'app-modalpessoas',
