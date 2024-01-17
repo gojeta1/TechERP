@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription, interval } from 'rxjs';
 
-declare var M: any;
+declare var M: any | undefined;
 
 
 @Component({
