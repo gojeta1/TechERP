@@ -2,32 +2,38 @@
     <br>
     <div class="row">
         <form class="center" (ngSubmit)="enviarCodigo()">
-            <div class="input-field col s12 m4">
+            <div class="input-field col s12 m6">
                 <i class="material-icons prefix">more_horiz</i>
                 <input type="password" id="senha" [(ngModel)]="senha" [ngModelOptions]="{standalone: true}">
                 <label for="senha">Nova Senha</label>
             </div>
-            <div class="input-field col s12 m4">
+            <div class="input-field col s12 m6">
                 <i class="material-icons prefix">more_horiz</i>
                 <input type="password" id="conf_senha" [(ngModel)]="conf_senha" [ngModelOptions]="{standalone: true}">
-                <label for="senha">Confirmar Senha</label>
+                <label for="conf_senha">Confirmar Senha</label>
             </div>
-            <div class="input-field col s12 m4" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
-                <i class="material-icons prefix">pin</i>
-                <input id="codigo" type="text" class="validate" name="codigo" [(ngModel)]="codigoVerifica" [ngModelOptions]="{standalone: true}">
-                <label for="codigo">Código de Verificação</label>
-              </div>
-              
-              <div class="col s6 offset-s6" *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
-                <h5 class="teal-text">{{ tempoRestante }} s</h5>
-              </div>        
+              <div class="row center">
+                <div class="col s12 m4 l4"></div>
+                <div class="input-field col s12 m4 l4" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}">
+                    <i class="material-icons prefix">pin</i>
+                    <input id="codigo" type="text" class="validate" name="codigo" [(ngModel)]="codigoVerifica" [ngModelOptions]="{standalone: true}">
+                    <label for="codigo">Código de Verificação</label>
+                </div>
+              </div>       
         </form>    
     </div>
 </div>
 <div class="modal-footer">
     <div class="divider"></div>
-        <a *ngIf="!aguardandoCodigo" class="btn waves-effect waves-teal teal lighten-4 black-text" (click)="reenviarCodigo()"><i class="material-icons right">autorenew</i>Reenviar</a>
-        <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-5 teal black-text btn-flat"><i class="material-icons right">verified_user</i>Solicitar Código</a>
-        <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-1 teal white-text btn-flat" type="submit"><i class="material-icons right">send</i>Alterar Senha</a>
-        <a class="modal-close waves-effect waves-teal btn-flat"><i class="material-icons right">close</i>Fechar</a>
+    <div class="row center">
+        <div class="col s12 m4 l2">
+            <a *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}" class="btn-flat waves-effect waves-teal teal-text" > <i class="material-icons left">timer</i>{{ tempoRestante }} s</a>
+        </div>
+        <div class="col s12 offset-s6">
+            <a *ngIf="!aguardandoCodigo" class="btn waves-effect waves-teal teal lighten-4 black-text" (click)="reenviarCodigo()"><i class="material-icons right">autorenew</i>Reenviar</a>    
+            <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-5 teal black-text btn-flat"><i class="material-icons right">verified_user</i>Solicitar Código</a>
+            <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-1 teal white-text btn-flat" type="submit"><i class="material-icons right">send</i>Alterar Senha</a>
+            <a class="modal-close waves-effect waves-teal btn-flat"><i class="material-icons right">close</i>Fechar</a> 
+        </div>
+    </div>
 </div>
