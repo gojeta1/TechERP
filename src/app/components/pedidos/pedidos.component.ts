@@ -1,6 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 
-declare var M: any;
+declare var M: any | undefined;
 
 @Component({
   selector: 'app-pedidos',
