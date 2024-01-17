@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalpessoasComponent } from "../modals/modalpessoas/modalpessoas.component";
-declare var M: any;
+
+declare var M: any | undefined;
 
 
 @Component({
