@@ -47,16 +47,15 @@ export class LoginComponent implements AfterViewInit{
           this.isLoading = true;
           M.toast({html: 'Login realizado com Sucesso !', classes:'teal accent-4'});
 
+          this.isLoading = false;
+          // setTimeout(() => {
+          //   this.isLoading = false;
+          //   this.router.navigate(['home/dashboard'])
+          // }, 5000);
 
-          setTimeout(() => {
-            this.isLoading = false;
-            this.router.navigate(['home/dashboard'])
-          }, 5000);
-
-          setTimeout(() => {
-              M.toast = null;
-          }, 3000);
-
+          // setTimeout(() => {
+          //     M.toast = null;
+          // }, 3000);
         } else {
           
           this.isLoading = false;
