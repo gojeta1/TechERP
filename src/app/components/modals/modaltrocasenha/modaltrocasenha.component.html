@@ -25,11 +25,13 @@
 </div>
 <div class="modal-footer">
     <div class="divider"></div>
-    <div class="row center">
-        <div class="col s12 m4 l2">
-            <a *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}" class="btn-flat waves-effect waves-teal teal-text" > <i class="material-icons left">timer</i>{{ tempoRestante }} s</a>
+    <div class="row">
+        <div class="col s4">
+            <div *ngIf="aguardandoCodigo" [ngStyle]="{'display': exibirElementos ? 'block' : 'none'}" class="teal-text ajuste" >
+                <i class="material-icons left">timer</i><h6>{{ tempoRestante }} s</h6>
+            </div>
         </div>
-        <div class="col s12 offset-s6">
+        <div class="col s8 offset right">
             <a *ngIf="!aguardandoCodigo" class="btn waves-effect waves-teal teal lighten-4 black-text" (click)="reenviarCodigo()"><i class="material-icons right">autorenew</i>Reenviar</a>    
             <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-5 teal black-text btn-flat"><i class="material-icons right">verified_user</i>Solicitar Código</a>
             <a (click)="enviarCodigo()" class="waves-effect waves-teal lighten-1 teal white-text btn-flat" type="submit"><i class="material-icons right">send</i>Alterar Senha</a>
