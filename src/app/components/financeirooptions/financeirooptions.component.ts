@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 declare var M: any;
@@ -17,16 +17,23 @@ declare var M: any;
     ]),
 ],
 })
-export class FinanceiroOptionsComponent implements OnInit {
+export class FinanceiroOptionsComponent  {
   
+  constructor(){}
+
   @Input() show: boolean = false;
 
-  ngOnInit() {
-    document.body.style.overflowY = 'hidden'; // Impede que o corpo da página role enquanto as opções estão visíveis
-}
+    ngOnInit(): void {
+      if(typeof document !== 'undefined'){
+        document.body.style.overflowY = 'hidden'; // Impede que o corpo da página role enquanto as opções estão visíveis
+      }
+  }
 
-  ngOnDestroy() {
-    document.body.style.overflowY = 'auto'; // Restaura o rolamento normal do corpo da página ao destruir o componente
+  ngOnDestroy(): void {
+    if (typeof document !== 'undefined') {
+      // Seu código que acessa o document vai aqui
+      document.body.style.overflowY = 'auto'; // Restaura o rolamento normal do corpo da página ao destruir o componente
+    }
 }
   
   // Restante do seu código...
