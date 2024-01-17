@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { ModalusuariosComponent } from '../modals/modalusuarios/modalusuarios.component';
 
-declare var M: any;
+declare var M: any | undefined;
 
 @Component({
   selector: 'app-usuarios',
@@ -17,8 +17,10 @@ export class UsuariosComponent implements OnInit{
   constructor(){}
 
   ngOnInit(): void {
-    const elems = document.querySelectorAll('.modal')
-    const instance = M.Modal.init(elems)
+    if(typeof document !== 'undefined'){
+      const elems = document.querySelectorAll('.modal')
+      const instance = M.Modal.init(elems)
+    }
   }
 
   email = {
