@@ -18,12 +18,14 @@ export class NotificationComponent implements OnInit {
 
 
   ngOnInit(): void {
-     const elemns = document.querySelectorAll('.collapsible');
-     const instances = M.Collapsible.init(elemns,{})
 
-     const elems = document.querySelectorAll('.modal');
-     const instances2 = M.Modal.init(elems,{})
-
+    if(typeof document !== 'undefined'){
+      const elemns = document.querySelectorAll('.collapsible');
+      const instances = M.Collapsible.init(elemns,{})
+ 
+      const elems = document.querySelectorAll('.modal');
+      const instances2 = M.Modal.init(elems,{})
+    }
   } 
 
 
