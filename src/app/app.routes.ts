@@ -18,13 +18,14 @@ export const routes: Routes = [
      },
      {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+
      },
      {
-        path: 'home',
-        component: HomeComponent,
-        canActivate: [AuthGuard],
-        children: [
+      path: 'home',
+      component: HomeComponent,
+      canActivate: [AuthGuard],
+      children: [
          { path: 'dashboard', 
          component: DashboardComponent,
          canActivate: [AuthGuard],
@@ -59,8 +60,9 @@ export const routes: Routes = [
             component: UsuariosComponent,
             canActivate: [AuthGuard],
          },
+    
+       ],   
+   },
 
-       ],
-     },
 
 ];
