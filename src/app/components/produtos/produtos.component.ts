@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalprodutosComponent } from "../modals/modalprodutos/modalprodutos.component";
 
-declare var M: any;
+declare var M: any | undefined;
 
 @Component({
     selector: 'app-produtos',
