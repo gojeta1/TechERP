@@ -41,17 +41,18 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    const elems = this.el.nativeElement.querySelectorAll('.sidenav');
-    const instance = M.Sidenav.init(elems, Option);  
-    
-    const elems2 = this.el.nativeElement.querySelectorAll('.modal')
-    const instance2 = M.Modal.init(elems2);
-
-    const elems3 = document.querySelectorAll('.dropdown-trigger');
-    const instances3 = M.Dropdown.init(elems3,{
-      direction: 'left',
-    });
-
+    if(typeof document !== 'undefined'){
+      const elems = this.el.nativeElement.querySelectorAll('.sidenav');
+      const instance = M.Sidenav.init(elems, Option);  
+      
+      const elems2 = this.el.nativeElement.querySelectorAll('.modal')
+      const instance2 = M.Modal.init(elems2);
+  
+      const elems3 = document.querySelectorAll('.dropdown-trigger');
+      const instances3 = M.Dropdown.init(elems3,{
+        direction: 'left',
+      });
+    }
   }
 
   Logout(){
