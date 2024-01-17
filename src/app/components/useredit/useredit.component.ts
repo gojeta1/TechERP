@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
-declare var M: any;
+declare var M: any | undefined;
 
 
 @Component({
