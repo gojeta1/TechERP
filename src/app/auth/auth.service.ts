@@ -32,6 +32,8 @@ export class AuthService {
       // }
 
       this.isAuthenticated = true;
+
+      this.router.navigate(['/home/dashboard'])
       return true;
 
     } else {
