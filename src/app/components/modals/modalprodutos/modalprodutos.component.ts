@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare var M: any;
+declare var M: any | undefined;
 
 
 @Component({
