@@ -1,3 +1,20 @@
+# TechERP
+
+É um projeto totalmente com Frontend baseado em um sistema ERP básico de utilização para empresas de pequeno/médio porte, totalmente em Angular, MaterializeCSS e TypeScript.
+
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **TechERP**
+| :label: Tecnologias | Angular, HTML, SCSS, MaterializeCSS, TypeScript (tecnologias utilizadas)
+| :rocket: URL         | https://localhost:4000
+
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](https://photos.app.goo.gl/aBLat8Y8cseYKJzz7)
+
+## Detalhes do projeto
+
+Projeto de um sistema ERP para pequenas/médias empresas que gostariam de utilizar um controle de vendas, contas a pagar, estoque, usuários, financeiro e etc. Esse sistema está totalmente codado somente seu Frontend ainda não está concluído completamente mais grande parte do sistema já se encontra esteticamente bem desenvolvido e responsivo.
+
 # Techno
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
