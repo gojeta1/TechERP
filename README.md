@@ -9,7 +9,7 @@
 | :rocket: URL         | https://localhost:4000
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![]([https://photos.app.goo.gl/aBLat8Y8cseYKJzz7](https://photos.google.com/photo/AF1QipP6V7_OXj8b1y-cxP_rHRlgo9WBRiJdeNoUhfBx))
+![](https://photos.google.com/photo/AF1QipP6V7_OXj8b1y-cxP_rHRlgo9WBRiJdeNoUhfBx)
 
 ## Detalhes do projeto
 
